@@ -1,0 +1,1121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Engineer — Builder / Tech Leader / Entrepreneur</title>
+    <meta
+      name="description"
+      content="A multidisciplinary software engineer, product-minded builder and entrepreneur."
+    />
+    <style>
+      :root {
+        --bg: #070709;
+        --panel: #101014;
+        --panel2: #15151b;
+        --text: #f4f4f5;
+        --muted: #9b9ba7;
+        --line: rgba(255, 255, 255, 0.1);
+        --acid: #d7ff3f;
+        --violet: #9b7cff;
+        --cyan: #62e6ff;
+        --orange: #ff9a5c;
+        --max: 1240px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(
+            circle at 75% 10%,
+            rgba(155, 124, 255, 0.14),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 15% 25%,
+            rgba(98, 230, 255, 0.08),
+            transparent 24%
+          ),
+          var(--bg);
+        color: var(--text);
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        overflow-x: hidden;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: var(--max);
+        margin: auto;
+        padding: 0 28px;
+      }
+      nav {
+        height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(7, 7, 9, 0.72);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--line);
+      }
+      .logo {
+        font-weight: 900;
+        letter-spacing: -0.06em;
+        font-size: 22px;
+      }
+      .logo span {
+        color: var(--acid);
+      }
+      .navlinks {
+        display: flex;
+        gap: 25px;
+        color: #bdbdc7;
+        font-size: 13px;
+      }
+      .navlinks a:hover {
+        color: white;
+      }
+      .pill {
+        border: 1px solid var(--line);
+        padding: 10px 14px;
+        border-radius: 999px;
+        font-size: 12px;
+      }
+      .hero {
+        min-height: calc(100vh - 78px);
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+        gap: 40px;
+        padding: 70px 0 90px;
+      }
+      .eyebrow {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--acid);
+        font-weight: 800;
+      }
+      h1 {
+        font-size: clamp(62px, 9vw, 132px);
+        line-height: 0.84;
+        letter-spacing: -0.085em;
+        margin: 18px 0 30px;
+        max-width: 900px;
+      }
+      .grad {
+        background: linear-gradient(
+          100deg,
+          #fff 15%,
+          var(--acid) 55%,
+          var(--violet)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero p {
+        font-size: 19px;
+        line-height: 1.55;
+        color: #b8b8c1;
+        max-width: 680px;
+      }
+      .cta {
+        display: flex;
+        gap: 12px;
+        margin-top: 28px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        padding: 14px 18px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        font-weight: 800;
+        font-size: 13px;
+      }
+      .btn.primary {
+        background: var(--acid);
+        color: #0a0a0a;
+        border-color: var(--acid);
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+      .orbit {
+        height: 500px;
+        position: relative;
+        display: grid;
+        place-items: center;
+      }
+      .orb {
+        width: 330px;
+        height: 330px;
+        border-radius: 50%;
+        border: 1px solid rgba(215, 255, 63, 0.25);
+        box-shadow:
+          0 0 100px rgba(155, 124, 255, 0.14),
+          inset 0 0 70px rgba(98, 230, 255, 0.06);
+        display: grid;
+        place-items: center;
+        position: relative;
+      }
+      .orb:before,
+      .orb:after {
+        content: "";
+        position: absolute;
+        border: 1px dashed rgba(255, 255, 255, 0.12);
+        border-radius: 50%;
+      }
+      .orb:before {
+        inset: -50px;
+      }
+      .orb:after {
+        inset: 35px;
+      }
+      .core {
+        text-align: center;
+        z-index: 2;
+      }
+      .core b {
+        font-size: 58px;
+        letter-spacing: -0.08em;
+      }
+      .core small {
+        display: block;
+        color: var(--muted);
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-size: 9px;
+      }
+      .float {
+        position: absolute;
+        padding: 9px 12px;
+        border: 1px solid var(--line);
+        background: rgba(16, 16, 20, 0.85);
+        border-radius: 10px;
+        font-size: 11px;
+        color: #ddd;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+      }
+      .f1 {
+        top: 45px;
+        right: 5px;
+      }
+      .f2 {
+        bottom: 75px;
+        left: 10px;
+      }
+      .f3 {
+        top: 190px;
+        left: 0;
+      }
+      .f4 {
+        bottom: 20px;
+        right: 20px;
+      }
+      section {
+        padding: 110px 0;
+        border-top: 1px solid var(--line);
+      }
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: end;
+        margin-bottom: 42px;
+      }
+      .kicker {
+        color: var(--muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+      }
+      .section-head h2 {
+        font-size: clamp(42px, 6vw, 78px);
+        line-height: 0.9;
+        letter-spacing: -0.07em;
+        margin: 10px 0 0;
+      }
+      .section-head p {
+        max-width: 430px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .marquee {
+        overflow: hidden;
+        border-block: 1px solid var(--line);
+        padding: 17px 0;
+        white-space: nowrap;
+      }
+      .track {
+        display: inline-block;
+        animation: scroll 28s linear infinite;
+        color: #777;
+        font-size: 13px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+      .track span {
+        margin: 0 25px;
+      }
+      .track b {
+        color: #ddd;
+      }
+      @keyframes scroll {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+      .card {
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.055),
+          rgba(255, 255, 255, 0.018)
+        );
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 25px;
+        min-height: 190px;
+        transition: 0.3s;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(215, 255, 63, 0.4);
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.28);
+      }
+      .card .num {
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .card h3 {
+        font-size: 24px;
+        letter-spacing: -0.04em;
+        margin: 35px 0 10px;
+      }
+      .card p {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 0;
+      }
+      .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .skillbox {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 26px;
+        background: #0c0c10;
+      }
+      .skillbox h3 {
+        margin: 0 0 18px;
+        font-size: 18px;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .tag {
+        padding: 8px 11px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font-size: 11px;
+        color: #d2d2d8;
+        background: rgba(255, 255, 255, 0.025);
+      }
+      .timeline {
+        position: relative;
+        margin-top: 20px;
+      }
+      .timeline:before {
+        content: "";
+        position: absolute;
+        left: 110px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: var(--line);
+      }
+      .job {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        gap: 35px;
+        padding: 0 0 55px;
+      }
+      .year {
+        color: var(--acid);
+        font-size: 12px;
+        font-weight: 900;
+        padding-top: 4px;
+      }
+      .jobbody {
+        border-left: 1px solid transparent;
+      }
+      .jobtop {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .job h3 {
+        font-size: 25px;
+        letter-spacing: -0.04em;
+        margin: 0;
+      }
+      .job .company {
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 6px;
+      }
+      .job p {
+        color: #aaaab4;
+        line-height: 1.7;
+        max-width: 750px;
+        font-size: 14px;
+      }
+      .impact {
+        display: flex;
+        gap: 9px;
+        flex-wrap: wrap;
+      }
+      .impact span {
+        font-size: 10px;
+        color: #d6d6dc;
+        border: 1px solid var(--line);
+        padding: 6px 9px;
+        border-radius: 999px;
+      }
+      .companies {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+      .companycard {
+        min-height: 240px;
+        border-radius: 20px;
+        padding: 28px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: linear-gradient(135deg, #111116, #09090b);
+      }
+      .companycard:after {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        right: -60px;
+        bottom: -70px;
+        background: radial-gradient(
+          circle,
+          rgba(215, 255, 63, 0.25),
+          transparent 65%
+        );
+      }
+      .companylogo {
+        font-weight: 950;
+        font-size: 30px;
+        letter-spacing: -0.08em;
+      }
+      .companycard:nth-child(2) .companylogo {
+        color: var(--cyan);
+      }
+      .companycard:nth-child(3) .companylogo {
+        color: var(--orange);
+      }
+      .companycard h3 {
+        font-size: 16px;
+        margin: 55px 0 8px;
+      }
+      .companycard p {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.6;
+      }
+      .companycard a {
+        font-size: 11px;
+        color: #ddd;
+        border-bottom: 1px solid #444;
+      }
+      .projects {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 14px;
+      }
+      .project {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 30px;
+        min-height: 280px;
+        background: #0d0d11;
+        position: relative;
+        overflow: hidden;
+      }
+      .project.big {
+        min-height: 440px;
+        background:
+          radial-gradient(
+            circle at 70% 30%,
+            rgba(155, 124, 255, 0.18),
+            transparent 38%
+          ),
+          #0d0d11;
+      }
+      .project .label {
+        font-size: 10px;
+        color: var(--acid);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+      .project h3 {
+        font-size: 38px;
+        letter-spacing: -0.06em;
+        max-width: 600px;
+        margin: 18px 0;
+      }
+      .project p {
+        color: var(--muted);
+        line-height: 1.7;
+        max-width: 600px;
+      }
+      .project .mock {
+        position: absolute;
+        right: -80px;
+        bottom: -100px;
+        width: 330px;
+        height: 230px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 18px;
+        transform: rotate(-7deg);
+        background: linear-gradient(145deg, #1c1c25, #09090c);
+        box-shadow: 0 30px 90px #000;
+      }
+      .mock:before {
+        content: "";
+        position: absolute;
+        inset: 18px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: repeating-linear-gradient(
+          0deg,
+          transparent 0 28px,
+          rgba(255, 255, 255, 0.035) 29px 30px
+        );
+      }
+      .stack {
+        display: grid;
+        gap: 14px;
+      }
+      .mini h3 {
+        font-size: 24px;
+        margin: 14px 0 8px;
+      }
+      .mini {
+        min-height: 213px;
+      }
+      .courses {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+      .course {
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: #0c0c10;
+      }
+      .course .pct {
+        color: var(--acid);
+        font-size: 11px;
+        font-weight: 900;
+      }
+      .course h4 {
+        font-size: 14px;
+        line-height: 1.35;
+        margin: 15px 0 0;
+      }
+      .course small {
+        color: var(--muted);
+        font-size: 10px;
+      }
+      .statement {
+        font-size: clamp(38px, 6vw, 80px);
+        line-height: 0.98;
+        letter-spacing: -0.07em;
+        max-width: 1000px;
+      }
+      .statement em {
+        font-style: normal;
+        color: var(--acid);
+      }
+      footer {
+        padding: 70px 0 30px;
+        border-top: 1px solid var(--line);
+      }
+      .footergrid {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: end;
+      }
+      .footerbig {
+        font-size: clamp(45px, 7vw, 95px);
+        font-weight: 900;
+        letter-spacing: -0.08em;
+        line-height: 0.85;
+      }
+      .social {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .social a {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 10px 13px;
+        font-size: 11px;
+        color: #ccc;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: 0.8s ease;
+      }
+      .reveal.on {
+        opacity: 1;
+        transform: none;
+      }
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .orbit {
+          display: none;
+        }
+        .grid,
+        .companies,
+        .courses {
+          grid-template-columns: 1fr 1fr;
+        }
+        .skills,
+        .projects {
+          grid-template-columns: 1fr;
+        }
+        .navlinks {
+          display: none;
+        }
+        .section-head {
+          display: block;
+        }
+        .timeline:before {
+          left: 0;
+        }
+        .job {
+          grid-template-columns: 1fr;
+          padding-left: 20px;
+          border-left: 1px solid var(--line);
+        }
+        .year {
+          padding: 0;
+        }
+        .footergrid {
+          display: block;
+        }
+        .social {
+          margin-top: 30px;
+        }
+      }
+      @media (max-width: 560px) {
+        .wrap {
+          padding: 0 18px;
+        }
+        .grid,
+        .companies,
+        .courses {
+          grid-template-columns: 1fr;
+        }
+        h1 {
+          font-size: 58px;
+        }
+        .hero {
+          padding-top: 45px;
+        }
+        .jobtop {
+          display: block;
+        }
+        .pill {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div
+        class="wrap"
+        style="
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <a class="logo" href="#">// <span>BUILD</span>ER</a>
+        <div class="navlinks">
+          <a href="#work">Work</a><a href="#skills">Stack</a
+          ><a href="#projects">Builds</a><a href="#learning">Learning</a
+          ><a href="#contact">Contact</a>
+        </div>
+        <a class="pill" href="#contact">Let's build →</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero wrap">
+        <div>
+          <div class="eyebrow">
+            Software Engineer · Tech Leader · Entrepreneur
+          </div>
+          <h1>I build <span class="grad">systems that matter.</span></h1>
+          <p>
+            Full-stack engineering meets product thinking, AI, system design and
+            an entrepreneurial mindset. I turn ambitious ideas into products
+            people can actually use.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#work">Explore the work ↗</a
+            ><a class="btn" href="#contact">Start a conversation</a>
+          </div>
+        </div>
+        <div class="orbit">
+          <div class="orb">
+            <div class="core"><b>∞</b><small>learn · build · lead</small></div>
+          </div>
+          <div class="float f1">AI / LLM Engineering</div>
+          <div class="float f2">Full-Stack Systems</div>
+          <div class="float f3">Product × Tech</div>
+          <div class="float f4">Entrepreneurship</div>
+        </div>
+      </section>
+
+      <div class="marquee">
+        <div class="track">
+          <span>JAVASCRIPT</span><b>NODE</b><span>REACT</span
+          ><b>AI ENGINEERING</b><span>SYSTEM DESIGN</span><b>PRODUCT</b
+          ><span>PYTHON</span><b>GCP</b><span>DOCKER</span><b>KUBERNETES</b
+          ><span>ENTREPRENEURSHIP</span><b>JAVASCRIPT</b><span>NODE</span
+          ><b>REACT</b><span>AI ENGINEERING</span><b>SYSTEM DESIGN</b
+          ><span>PRODUCT</span><b>PYTHON</b><span>GCP</span><b>DOCKER</b
+          ><span>KUBERNETES</span><b>ENTREPRENEURSHIP</b>
+        </div>
+      </div>
+
+      <section id="work">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <div class="kicker">01 / Experience</div>
+              <h2>Where I’ve<br /><span class="grad">shipped.</span></h2>
+            </div>
+            <p>
+              Three environments. Three different problems. One constant: build
+              useful software, learn fast, and raise the bar.
+            </p>
+          </div>
+          <div class="companies">
+            <div class="companycard reveal">
+              <div class="companylogo">ALTAIR</div>
+              <h3>Engineering Software · AI · HPC</h3>
+              <p>
+                Experience in a global engineering-technology environment, with
+                exposure to software development around engineering workflows
+                and high-performance technical systems.
+              </p>
+              <a
+                href="https://web.altair.com/ai-powered-engineering-use-cases"
+                target="_blank"
+                >Explore Altair AI use cases ↗</a
+              >
+            </div>
+            <div class="companycard reveal">
+              <div class="companylogo">e9ine</div>
+              <h3>Software · Apps · Web</h3>
+              <p>
+                Startup-style product engineering across web applications and
+                software development — moving from idea to implementation
+                quickly.
+              </p>
+              <a href="https://e9.co.uk/" target="_blank">Visit e9ine ↗</a>
+            </div>
+            <div class="companycard reveal">
+              <div class="companylogo">AAFT</div>
+              <h3>EdTech · Digital Products</h3>
+              <p>
+                Building software in an education ecosystem where technology,
+                content, operations and user experience meet.
+              </p>
+              <a href="https://aaftonline.com/" target="_blank"
+                >Visit AAFT Online ↗</a
+              >
+            </div>
+          </div>
+          <div class="timeline" style="margin-top: 65px">
+            <div class="job reveal">
+              <div class="year">ENGINEER</div>
+              <div>
+                <div class="jobtop">
+                  <div>
+                    <h3>Full-Stack Engineering</h3>
+                    <div class="company">
+                      Web products · APIs · databases · cloud
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  Design and build modern web systems from interface to backend,
+                  with a bias toward shipping, maintainability and real user
+                  outcomes.
+                </p>
+                <div class="impact">
+                  <span>React / Vue</span><span>Node / Express</span
+                  ><span>MongoDB / SQL</span><span>AWS / GCP</span>
+                </div>
+              </div>
+            </div>
+            <div class="job reveal">
+              <div class="year">BUILDER</div>
+              <div>
+                <h3>AI + Product Engineering</h3>
+                <div class="company">From prototype → product</div>
+                <p>
+                  Explore AI-enabled workflows, LLM applications, automation and
+                  visual product experiences — combining technical execution
+                  with product judgment.
+                </p>
+                <div class="impact">
+                  <span>LLM / RAG</span><span>Agents</span><span>AI UX</span
+                  ><span>System Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <div class="kicker">02 / Capability Map</div>
+              <h2>A stack built<br />to <span class="grad">ship.</span></h2>
+            </div>
+            <p>
+              Not a list of buzzwords. A working toolkit spanning code,
+              architecture, AI, product and leadership.
+            </p>
+          </div>
+          <div class="skills">
+            <div class="skillbox reveal">
+              <h3>01 — Frontend</h3>
+              <div class="tags">
+                <span class="tag">JavaScript</span><span class="tag">React</span
+                ><span class="tag">Next.js</span><span class="tag">Vue 3</span
+                ><span class="tag">Nuxt</span><span class="tag">Vite</span
+                ><span class="tag">Tailwind</span><span class="tag">Redux</span
+                ><span class="tag">HTML/CSS</span>
+              </div>
+            </div>
+            <div class="skillbox reveal">
+              <h3>02 — Backend & Data</h3>
+              <div class="tags">
+                <span class="tag">Node.js</span><span class="tag">Express</span
+                ><span class="tag">MongoDB</span><span class="tag">SQL</span
+                ><span class="tag">REST APIs</span
+                ><span class="tag">Strapi</span><span class="tag">Python</span
+                ><span class="tag">Java</span>
+              </div>
+            </div>
+            <div class="skillbox reveal">
+              <h3>03 — Engineering</h3>
+              <div class="tags">
+                <span class="tag">C++</span><span class="tag">DSA</span
+                ><span class="tag">LeetCode</span
+                ><span class="tag">System Design</span
+                ><span class="tag">Microservices</span
+                ><span class="tag">Spring Boot</span
+                ><span class="tag">Docker</span
+                ><span class="tag">Kubernetes</span>
+              </div>
+            </div>
+            <div class="skillbox reveal">
+              <h3>04 — Cloud & AI</h3>
+              <div class="tags">
+                <span class="tag">AWS</span><span class="tag">GCP</span
+                ><span class="tag">LLM Engineering</span
+                ><span class="tag">RAG</span><span class="tag">QLoRA</span
+                ><span class="tag">AI Agents</span
+                ><span class="tag">Cloud Architecture</span>
+              </div>
+            </div>
+            <div class="skillbox reveal">
+              <h3>05 — Product</h3>
+              <div class="tags">
+                <span class="tag">Product Strategy</span
+                ><span class="tag">User Experience</span
+                ><span class="tag">Roadmapping</span
+                ><span class="tag">MVP Thinking</span
+                ><span class="tag">Prototyping</span
+                ><span class="tag">Presentation</span>
+              </div>
+            </div>
+            <div class="skillbox reveal">
+              <h3>06 — Founder Mindset</h3>
+              <div class="tags">
+                <span class="tag">Problem Discovery</span
+                ><span class="tag">0→1 Building</span
+                ><span class="tag">Business Thinking</span
+                ><span class="tag">Communication</span
+                ><span class="tag">Leadership</span
+                ><span class="tag">Continuous Learning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <div class="kicker">03 / Selected Builds</div>
+              <h2>Ideas become<br /><span class="grad">interfaces.</span></h2>
+            </div>
+            <p>
+              A portfolio that feels less like a resume and more like a product
+              lab.
+            </p>
+          </div>
+          <div class="projects">
+            <div class="project big reveal">
+              <div class="label">Featured concept</div>
+              <h3>
+                Visual Tracker — goals, actions & AI visualization in one visual
+                workspace.
+              </h3>
+              <p>
+                A product direction built around turning goals into visible
+                systems: create goals, attach imagery, define actions, track
+                daily progress and use AI to visualize the future state.
+              </p>
+              <div class="tags" style="margin-top: 25px">
+                <span class="tag">React</span><span class="tag">Vite</span
+                ><span class="tag">Tailwind</span><span class="tag">Node</span
+                ><span class="tag">MongoDB</span><span class="tag">AI</span>
+              </div>
+              <div class="mock"></div>
+            </div>
+            <div class="stack">
+              <div class="project mini reveal">
+                <div class="label">Product</div>
+                <h3>DressMe-Up</h3>
+                <p>
+                  A visual closet concept: organize clothing, accessories and
+                  looks, then explore outfit combinations through a digital
+                  wardrobe.
+                </p>
+              </div>
+              <div class="project mini reveal">
+                <div class="label">Product</div>
+                <h3>Couples Virtual Home</h3>
+                <p>
+                  A shared digital space for long-distance couples — days,
+                  notes, songs, virtual dates, plans and memories without
+                  app-hopping.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="learning">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <div class="kicker">04 / Learning Engine</div>
+              <h2>Always<br /><span class="grad">leveling up.</span></h2>
+            </div>
+            <p>
+              Courses completed and in progress across engineering, AI, cloud,
+              product and entrepreneurship.
+            </p>
+          </div>
+          <div class="courses">
+            <div class="course reveal">
+              <div class="pct">91% · ACTIVE</div>
+              <h4>Complete JavaScript Course 2025</h4>
+              <small>Advanced JS foundation</small>
+            </div>
+            <div class="course reveal">
+              <div class="pct">85% · ACTIVE</div>
+              <h4>Node.js, Express, MongoDB Bootcamp</h4>
+              <small>Backend engineering</small>
+            </div>
+            <div class="course reveal">
+              <div class="pct">92% · DONE</div>
+              <h4>JavaScript DSA + LeetCode</h4>
+              <small>Algorithms & problem solving</small>
+            </div>
+            <div class="course reveal">
+              <div class="pct">92% · DONE</div>
+              <h4>C++ DSA + LeetCode</h4>
+              <small>Core engineering</small>
+            </div>
+            <div class="course reveal">
+              <div class="pct">100% · DONE</div>
+              <h4>Vue Developer Bootcamp</h4>
+              <small>Vue · Pinia · Vitest</small>
+            </div>
+            <div class="course reveal">
+              <div class="pct">41% · ACTIVE</div>
+              <h4>100 Days of Code — Python</h4>
+              <small>Python engineering</small>
+            </div>
+            <div class="course reveal">
+              <div class="pct">41% · ACTIVE</div>
+              <h4>GCP Associate Cloud Engineer</h4>
+              <small>Cloud architecture</small>
+            </div>
+            <div class="course reveal">
+              <div class="pct">96% · ACTIVE</div>
+              <h4>Mastering System Design</h4>
+              <small>Architecture & interviews</small>
+            </div>
+            <div class="course reveal">
+              <div class="pct">30% · ACTIVE</div>
+              <h4>Ultimate React Course 2025</h4>
+              <small>React · Next.js · Redux</small>
+            </div>
+            <div class="course reveal">
+              <div class="pct">4% · ACTIVE</div>
+              <h4>AI Engineer Core Track</h4>
+              <small>LLMs · RAG · QLoRA · Agents</small>
+            </div>
+            <div class="course reveal">
+              <div class="pct">4% · ACTIVE</div>
+              <h4>Microservices with Spring Boot</h4>
+              <small>Docker · Kubernetes</small>
+            </div>
+            <div class="course reveal">
+              <div class="pct">100% · DONE</div>
+              <h4>Product Manager</h4>
+              <small>Product & job skills</small>
+            </div>
+            <div class="course reveal">
+              <div class="pct">100% · DONE</div>
+              <h4>Entrepreneurship</h4>
+              <small>Founder fundamentals</small>
+            </div>
+            <div class="course reveal">
+              <div class="pct">100% · DONE</div>
+              <h4>Object Oriented Programming in C++</h4>
+              <small>OOP foundations</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="statement reveal">
+            I don't want to just <em>write code.</em><br />I want to understand
+            the problem, design the system, build the product, and create the
+            <em>company.</em>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <div class="kicker">05 / Contact</div>
+              <h2>
+                Let’s build<br /><span class="grad">something wild.</span>
+              </h2>
+            </div>
+            <p>
+              Open to ambitious engineering, product, AI and founder-level
+              opportunities.
+            </p>
+          </div>
+          <div class="cta reveal">
+            <a
+              class="btn primary"
+              href="https://www.linkedin.com/in/tanvi-kapurwan-051b871aa/?isSelfProfile=true"
+              >Email me ↗</a
+            ><a
+              class="btn"
+              href="https://www.linkedin.com/in/tanvi-kapurwan-051b871aa/?isSelfProfile=true"
+              >LinkedIn ↗</a
+            ><a
+              class="btn"
+              href="https://github.com/TanviKapurwan23?tab=repositories"
+              >GitHub ↗</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footergrid">
+        <div>
+          <div class="footerbig">BUILD.<br />LEAD.<br />REPEAT.</div>
+          <p style="color: #777; font-size: 12px; margin-top: 25px">
+            © 2026 · Software Engineer / Builder / Entrepreneur
+          </p>
+        </div>
+        <div class="social">
+          <a href="#work">Experience</a><a href="#skills">Stack</a
+          ><a href="#projects">Projects</a><a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const io = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("on");
+          }),
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((x) => io.observe(x));
+    </script>
+  </body>
+</html>
